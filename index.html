@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <title>Rock Paper Scissers</title>
+    <title>Rock Paper Scissors</title>
 </head>
 
 <body>
     <script>
         function computerPlay() {
-            const options = ["rock", "paper", "scissers"]
+            const options = ["rock", "paper", "scissors"]
             return options[Math.floor(Math.random() * options.length)]
         };
 
@@ -23,7 +23,7 @@
                         return "Tie"
                     if (computerSelection == "paper")
                         return "You Lose"
-                    if (computerSelection == "scissers")
+                    if (computerSelection == "scissors")
                         return "You Win"
                     break;
                 case "paper":
@@ -31,15 +31,15 @@
                         return "You Win"
                     if (computerSelection == "paper")
                         return "Tie"
-                    if (computerSelection == "scissers")
+                    if (computerSelection == "scissors")
                         return "You Lose"
                     break;
-                case "scissers":
+                case "scissors":
                     if (computerSelection == "rock")
                         return "You Lose"
                     if (computerSelection == "paper")
                         return "You Win"
-                    if (computerSelection == "scissers")
+                    if (computerSelection == "scissors")
                         return "Tie"
                     break;
             }
@@ -47,7 +47,7 @@
 function game(yourScore, computerScore){
     alert("First to 5 points win")
     while (yourScore < 5 && computerScore < 5){
-    let playerSelection = prompt("Enter rock, paper, or scissers")
+    let playerSelection = prompt("Enter rock, paper, or scissors")
     let computerSelection = computerPlay();
     computerPlay();
     console.log(playRound(playerSelection, computerSelection))
