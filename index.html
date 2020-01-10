@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rock Paper Scissers</title>
+    </head>
+    <body>
+        <script>
+            function computerPlay(){
+                const options = ["rock", "paper", "scissers"]
+                return options[Math.floor(Math.random() * options.length)]
+            };
+const playerSelection = prompt("Enter rock, paper, or scissers")
+const computerSelection = computerPlay();
+
+              function playRound(playerSelection, computerSelection) {
+                 const playerChoice = playerSelection.toLowerCase();
+                    switch (playerChoice) {
+                        case "rock":
+                            if (computerSelection == "rock")
+                                 return "Tie"
+                             if (computerSelection == "paper")
+                                  return "You Lose"
+                             if (computerSelection == "scissers")
+                       return "You Win"
+                            break;
+                        case "paper":
+                            if (computerSelection == "rock")
+                                return "You Win"
+                            if (computerSelection == "paper")
+                                return "Tie"
+                            if (computerSelection == "scissers")
+                                return "You Lose"
+                            break;
+                        case "scissers":
+                            if (computerSelection == "rock")
+                                return "You Lose"
+                            if (computerSelection == "paper")
+                                return "You Win"
+                            if (computerSelection == "scissers")
+                                return "Tie"
+                            break;
+                    }
+              }
+var round = playRound(playerSelection, computerSelection)
+function game(round){
+var yourScore = 0
+var computerScore = 0
+while (yourScore < 5 && computerScore < 5){
+switch(round){
+    case "You Win":
+    yourScore += 1
+    alert(round)
+    break;
+    case "You Lose":
+    computerScore += 1
+    alert(round)
+    break;
+    case "Tie":
+    alert(round)
+    break;
+}
+    console.log(game(round))
+}
+    if (yourScore == 5)
+        alert("You won the game!")
+    else if (computerScore == 5)
+        alert("Computer won the game!")
+}
+console.log(game(round))
+        </script>
+    </body>
+</html>
